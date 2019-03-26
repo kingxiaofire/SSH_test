@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+
+    "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+
+    "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+	<constant name="struts.enable.DynamicMethodInvocation" value="true"></constant>
+	<package name="p01" extends="struts-default" strict-method-invocation="false">
+		<action name="loginAction" 
+		class="com.orcla.login.LoginAction"
+		>
+		<result name="success">/main.jsp</result>	
+		<result name="fail">/login.jsp</result>
+		</action>
+	</package>
+	
+	<package name="p02" extends="struts-default" strict-method-invocation="false">
+		<action name="EmpAction" 
+		class="com.orcla.login.EmpAction"
+		>	
+		<result name="success">/main.jsp</result>	
+		<result name="fail">/login.jsp</result>
+		<result name="empList">/emp.jsp</result>
+		<result name="toUpdate">/update.jsp</result>
+		<result name="del">/login.jsp</result>
+		<result name="noadd">/create.jsp</result>
+		<result name="successadd">/main.jsp</result>
+		<result name="xiugaino">/main.jsp</result>
+		<result name="zhuceyes">/login.jsp</result>
+		<result name="zhuceno">/res.jsp</result>
+		</action>
+	</package>
+</struts>
